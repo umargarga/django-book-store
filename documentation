@@ -17,3 +17,16 @@ Under installed apps
 TEMPLATE
 After creating a template (global template), configure it in the seetings.py (templates array) under DIRS of the project
 BASE_DIR / 'challenges' / 'templates'
+
+MIGRATION
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py shell (To execute query in the sqlite)
+//IMPORT MODEL
+from book_outlet.models import Book
+//INSERT INTO BOOK
+book_object = Book(title="Book 1", rating=4)
+book_object.save()
+//GET ALL BOOKS
+Book.objects.all()
