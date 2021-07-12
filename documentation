@@ -30,3 +30,15 @@ book_object = Book(title="Book 1", rating=4)
 book_object.save()
 //GET ALL BOOKS
 Book.objects.all()
+GET SINGLE ENTRY
+1. Book.objects.all()[0]
+2. Book.objects.get(id=1)
+2. Book.objects.get(title="Herry Potter")
+2. Book.objects.filter(title="Herry") (filter is the same as LIKE)
+2. Book.objects.filter(title="Herry", rating=2) (filter is the same as LIKE)
+2. Book.objects.filter(title="Herry", rating__lt=2) (lt= less than, lte=less than or equal, gt, gte)
+2. Book.objects.filter(title__contains="Herry")
+UPDATE DATA
+book_obj = Book.objects.all()[0]
+DELETE
+book_obj.delete()
